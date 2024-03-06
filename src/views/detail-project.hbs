@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
+    
+    <body style="margin: 0;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
+        <div class="container-fluid">
+            <img src="/assets/img/dumbways.png" style="width: 50px;" class="me-3">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/project">Add Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/testimonial">Testimonials</a>
+              </li>
+              
+            </ul>
+            <a href="/contact">
+            <button type="button" class="btn btn-dark">Contact Me</button>
+            </a>
+        </div>
+        </div>
+      </nav>
+        <div style="padding: 30px 200px 30px 200px;">
+            <h1 style="text-align: center;" class="mb-4">{{data.projectname}}</h1>
+            <div style="display: flex; margin-bottom: 40px;">
+                <img src="/assets/img/js.png" style="height: 300px;"/>
+
+                <div style="margin-left: 60px;">
+                    <h5>Duration</h5>
+                    <div style="display: flex;">
+                    <img src="/assets/img/calendar.png" style="height:20px;"/>
+                    <p style="margin-top: 0; margin-left: 10px;">{{data.startdate}} - {{data.enddate}}</p>
+                    </div>
+                    
+                    <div style="display: flex;">
+                        <img src="/assets/img/clock.png" style="height: 20px;"/>
+                        <p style="margin-top: 0; margin-left: 10px;">{{data.duration}}</p>
+                    </div>
+                    
+                    <h5>Technologies</h5>
+                    <div style="display: flex;" class="column-gap-2">
+                    {{{data.techs}}}
+                    </div>
+            
+            </div>
+            </div>
+
+            <p style="text-align: justify;">{{data.description}}</p>
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    </body>
+</html>

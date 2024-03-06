@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./assets/css/navbar.css"/>
+        <link rel="stylesheet" href="./assets/css/testimonial.css"/>
+        <meta name="viewport" content="width-device-witdh, initial-scale=1.0">
+    </head>
+
+    <body>
+        <nav>
+            <ul class="nav-ul">
+                <div style="display: flex; gap: 40px; align-items: center;">
+                <li>
+                    <img src="./assets/img/dumbways.png" width="50px"/>
+                </li>
+                <li>
+                    <a href="/index" class="navbar-link">Home</a>
+                </li>
+                <li>
+                    <a href="/project" class="navbar-link">My Project</a>
+                </li>
+                <li>
+                    <a href="/testimonial" class="navbar-link active">Testimonials</a>
+                </li>
+                </div>
+                <div>
+                <li>
+                    <button class="button-contactme"><a href ="/contact" class="button-link">Contact Me</a></button>
+                </li>
+                <img src="./assets/img/bars.png" class="ham-button" id="ham-button" onclick="openHam()"/>
+                </div>
+            </ul>
+
+            <div id="nav-ham-container" class="nav-ham-container hidden">
+                <a href="index.html" class="nav-ham-link ">Home</a>
+                <a href="project.html" class="nav-ham-link">My Project</a>
+                <a href="testimonial.html" class="nav-ham-link ham-active">Testimonials</a>
+                <a href="contact.html" class="nav-ham-link">Contact Me</a>
+            </div>
+        </nav>
+
+        <div class="testi-container">
+            <h1 >My Testimonials</h1>
+
+            <div class="container-rating">
+                <h2>Rating By Star</h2>
+                <div class="rating">
+                    <button class="rating-button" onclick="allTestimonial()">
+                        All
+                    </button>
+                    <button class="rating-button" onclick="filterTestimonial(1)">
+                        1 <img src="./assets/img/star.png" class="star" />
+                    </button>
+                    <button class="rating-button" onclick="filterTestimonial(2)">
+                        2 <img src="./assets/img/star.png" class="star" />
+                    </button>
+                    <button class="rating-button" onclick="filterTestimonial(3)">
+                        3 <img src="./assets/img/star.png" class="star" />
+                    </button>
+                    <button class="rating-button" onclick="filterTestimonial(4)">
+                        4 <img src="./assets/img/star.png" class="star" />
+                    </button>
+                    <button class="rating-button" onclick="filterTestimonial(5)">
+                        5 <img src="./assets/img/star.png" class="star" />
+                    </button>
+                    
+                </div>
+            </div>
+            
+            <section class="testimonials" id="testimonials">
+            </section>
+        </div>
+    </body>
+    <script src="./assets/js/ajax.js"></script>
+    <script src="./assets/js/nav.js"></script>
+</html>
